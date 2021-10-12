@@ -15,10 +15,12 @@ class Animal {
   <div>
     <a href="#" title="Close" class="modal-close" onclick="closeModal(this);">Close</a>
     <h1>${this.name}</h1>
-    <div>Age: ${this.age}</div>
-    ${this.sound ? `<div>Sound: ${this.sound}</div>`: ''}
-    ${this.color ? `<div>Color: ${this.color}</div>`: ''}
-    ${this.owner ? `<div>Owner: ${this.owner}</div>`: ''}
+    <ul>
+    <li>Age: ${this.age}</li>
+    ${this.sound ? `<li>Sound: ${this.sound}</li>`: ''}
+    ${this.color ? `<li>Color: ${this.color}</li>`: ''}
+    ${this.owner ? `<li>Owner: ${this.owner}</li>`: ''}
+    </ul>
     </div>
     `;
     return document.body.appendChild(modal);  
