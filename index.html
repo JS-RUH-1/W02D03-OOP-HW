@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<style>
+    img{
+        width: 150px;
+    }
+    body{
+        text-align: center;
+    }
+</style>
+
+<img onclick="show(myCat, catinfo )" id="cat" src="" alt="">
+<ul id="catinfo"></ul>
+
+<img onclick="show(myDog, doginfo )" id="dog"  src="" alt="">
+<ul id="doginfo"></ul>
+
+<img onclick="show(myFish, fishinfo )" id="fish"  src="" alt="">
+<ul id="fishinfo"></ul>
+
+
+
+
+
+
+    <script>
+//         let movie = {title: 'Love in the afternoon', duration: 2, stars: ['aaa', 'bbb', 'ddd']}
+
+// console.log(`${movie.title} lasts for ${movie.duration} minutes. Stars: ${movie.stars.join(", ")}`)
+
+
+
+class Animal {
+    constructor(name, age, image, sound) {
+      this.name = name;
+      this.age = age;
+      this.image = image;
+      this.sound = sound;         
+    }
+    eats() {
+      return this.name + ' eats food.';
+    }
+      makesSound() {
+      return this.name + ' sound is ' + this.sound ;
+    }
+  }
+  
+  class Cat extends Animal {
+    constructor(name, age, image, sound, owner) {
+      super(name, age, image, sound);
+      this.owner = owner;
+    }
+    eats() {
+      return 'Cats eat mouse.';
+    }
+     makesSound() {
+      return 'Cats sound is meow ';
+    }
+  }
+  
+  class Dog extends Animal {
+    constructor(name, age, image, sound, owner) {
+      super(name, age, image, sound);
+      this.owner = owner;
+    }
+    eats() {
+      return 'Dogs eat chicken.';
+    }
+    makesSound() {
+      return 'Dogs sound is woof ';
+    }
+  }
+
+  class Fish extends Animal {
+    constructor(name, age, image, sound, color) {
+      super(name, age, image, sound);
+      this.color = color;
+    }
+    eats() {
+      return 'Fish eats flakes.';
+    }
+  }
+
+
+  myCat = new Cat("kitty", "2", '244.png', 'meow', 'me');
+  myCat.eats();
+  myCat.makesSound();
+
+  myDog = new Dog("doggy", "2", '244.png', 'woof', 'me');
+  myDog.eats();
+  myDog.makesSound();
+
+  myFish = new Fish("fishy", "2", '244.png', 'noSound :(' , 'orange');
+  myFish.eats();
+  myFish.makesSound();
+
+
+  document.getElementById('cat').src = 'cat.jpeg'
+  document.getElementById('dog').src = 'dog.jpeg'
+  document.getElementById('fish').src = 'fish.jpeg'
+
+  function show(obj, ul){
+      if (obj.name === 'fishy') {
+        ul.innerHTML = `
+      <li> Name: ${obj.name} </li>
+      <li> Age: ${obj.age} </li>
+      <li> Sound: ${obj.sound} </li>
+      <li> Owner: ${obj.color} </li>`
+      }else{
+        ul.innerHTML = `
+      <li> Name: ${obj.name} </li>
+      <li> Age: ${obj.age} </li>
+      <li> Sound: ${obj.sound} </li>
+      <li> Owner: ${obj.owner} </li>`
+      }
+  }
+    </script>
+</body>
+</html>
