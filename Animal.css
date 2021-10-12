@@ -1,0 +1,33 @@
+body{
+
+    background-color: rgb(151, 136, 116);
+}
+.parent{
+
+    background-color: rgb(172, 228, 228);
+}
+
+
+.child{
+
+    background-color: beige;
+    margin: 3ch;
+ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1;
+
+    
+}
+
+.ani{
+
+    background-color: rgb(218, 185, 185);
+    border: ridge;
+    margin: auto;
+}
+img{
+    width: 80%;
+     padding: 2ch;
+    
+}
