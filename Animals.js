@@ -77,17 +77,20 @@ console.log(mfish.eats());
 
 // DOG show in HTML
 
-//Click times to hide information in the second click 
+//Click times to hide information in the second click
 let clickTimes1 = 0;
+document.getElementById("ui1").style = "list-style-type: none;";
 document.getElementById("image").src = mdog.image;
 document.getElementById("image").addEventListener("click", function () {
   if (clickTimes1 == 0) {
+    document.getElementById("ui1").style = "list-style-type: circle;";
     document.getElementById("name").innerHTML = "Name: " + mdog.name;
     document.getElementById("age").innerHTML = "Age: " + mdog.age;
     document.getElementById("sound").innerHTML = "Sound: " + mdog.sound;
     document.getElementById("owner").innerHTML = "Owner: " + mdog.owner;
     clickTimes1 = 1;
   } else {
+    document.getElementById("ui1").style = "list-style-type: none;";
     document.getElementById("name").innerHTML = "";
     document.getElementById("age").innerHTML = "";
     document.getElementById("sound").innerHTML = "";
@@ -96,20 +99,22 @@ document.getElementById("image").addEventListener("click", function () {
   }
 });
 
-
 // Cat show in HTML
 
-//Click times to hide information in the second click 
+//Click times to hide information in the second click
 let clickTimes2 = 0;
+document.getElementById("ui2").style = "list-style-type: none;";
 document.getElementById("image2").src = mcat.image;
 document.getElementById("image2").addEventListener("click", function () {
   if (clickTimes2 == 0) {
+    document.getElementById("ui2").style = "list-style-type: circle;";
     document.getElementById("name2").innerHTML = "Name: " + mcat.name;
     document.getElementById("age2").innerHTML = "Age: " + mcat.age;
     document.getElementById("sound2").innerHTML = "Sound: " + mcat.sound;
     document.getElementById("owner2").innerHTML = "Owner: " + mcat.owner;
     clickTimes2 = 1;
   } else {
+    document.getElementById("ui2").style = "list-style-type: none;";
     document.getElementById("name2").innerHTML = "";
     document.getElementById("age2").innerHTML = "";
     document.getElementById("sound2").innerHTML = "";
@@ -119,17 +124,20 @@ document.getElementById("image2").addEventListener("click", function () {
 });
 
 // Fish show in HTML
-//Click times to hide information in the second click 
+//Click times to hide information in the second click
 let clickTimes3 = 0;
+document.getElementById("ui3").style = "list-style-type: none;";
 document.getElementById("image3").src = mfish.image;
 document.getElementById("image3").addEventListener("click", function () {
   if (clickTimes3 == 0) {
+    document.getElementById("ui3").style = "list-style-type: circle;";
     document.getElementById("name3").innerHTML = "Name: " + mfish.name;
     document.getElementById("age3").innerHTML = "Age: " + mfish.age;
     document.getElementById("sound3").innerHTML = "Sound: " + mfish.sound;
     document.getElementById("color3").innerHTML = "Color: " + mfish.color;
     clickTimes3 = 1;
   } else {
+    document.getElementById("ui3").style = "list-style-type: none;";
     document.getElementById("name3").innerHTML = "";
     document.getElementById("age3").innerHTML = "";
     document.getElementById("sound3").innerHTML = "";
