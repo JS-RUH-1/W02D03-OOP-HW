@@ -1,0 +1,17 @@
+body {
+    background-color: bisque;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border: 1px solid;
+    margin: 10px;
+}
+
+#animalDetials {
+    text-align: center;
+}
