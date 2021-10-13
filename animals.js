@@ -53,33 +53,46 @@ class Fish extends Animal {
       console.log("fish eats flakes");
     }
   }
-  
-const fish1 = new Fish("blue whale",30,"./images/whale.jpg","singing","blue");
-const cat1 = new Cat("persian", 30, "cat.jpg", "meow", "tom");
-const dog1 = new Dog("chihuahua", 30, "dog.jpg", "bark", "scott");
-const animal1 = new Animal("mouse", 30, "mouse.jpg", "squeek");
+
+
+
+
+
+
+
+const animal1 = new Fish("blue whale", 30, "./images/whale.jpg", "sing", "blue");
+animal1.eats();
+let animal2 = new Cat("persian", 30, "./images/cat.jpg", "meow", "tom");
+let animal3 = new Dog("chihuahua", 30, "./images/dog.jpg", "bark", "scott");
+let animal4 = new Animal("mouse", 30, "./images/mouse.jpg", "squeek");
+let animals=[animal1,animal2,animal3,animal4];
 
 
 animal1.eats();
-fish1.eats();
-dog1.sound();
+animal3.eats();
+animal4.animalSound();
+
+for (let i=0; i<animals.length; i++) {
+let img = new Image();
+img.src = animals[i].image;
+img.style = "width: 300px; height: 300px;";
+img_home.appendChild(img);
+let summary="";
+summary+=`Animal name: ${animals[i].name}
+Age: ${animals[i].age} years old
+Its sound called: ${animals[i].sound}
+`;
+animals[i] instanceof Fish ? summary+=`Its color is: ${animals[i].color}` : null;
+animals[i] instanceof Cat || animals[i] instanceof Dog? summary+=`Its owner named: ${animals[i].owner}` : null;
+
+let lbl = document.getElementById("img_home").innerHTML+='<br/><pre id="preId" style="display:none">'+summary+'</pre>' ;
+}
 
 
-// let catEle = document.getElementById('cat');
-// catEle.addEventListener('click',function(){
-//     document.getElementById("cl").innerHTML =  "";
-// });
-
-
-
-
-// function myFunction() {
-//     let x = document.createElement("IMG");
-//     x.setAttribute("src", "whale.jpg");
-//     // x.setAttribute("width", "304");
-//     // x.setAttribute("height", "228");
-//     // x.setAttribute("alt", "Whale");
-//     document.body.appendChild(x);
-//   }
-
-
+function doSomething(num){
+    let preS=document.getElementsByTagName("pre");
+    for(let i=0;i<preS.length;i++){
+        preS[i].style="display:block";
+    }
+    console.log(num.id);
+}
