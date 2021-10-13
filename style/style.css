@@ -1,0 +1,17 @@
+img{
+    width: 200px;
+    height:200px;
+}
+
+.container{
+padding:10%;
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: whitesmoke;
+    
+}
