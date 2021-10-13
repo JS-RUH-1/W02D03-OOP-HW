@@ -62,6 +62,12 @@ const cat1 = new Cats("laly", 10, "https://encrypted-tbn0.gstatic.com/images?q=t
 const dog1 = new Dogs("popo", 5, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXKDSv9C9N0TFrJG0rVHyQgIlIdr7UTF2AfA&usqp=CAU", "woof", "10rem")
 const fish1 = new Fish("meme", 1, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSihSBe5wuERa1KsF7oyGVu_DsgTISHQ8-N_g&usqp=CAU", "", "red")
 
+// Excute the methods
+console.log(cat1.eats());
+console.log(dog1.eats());
+console.log(fish1.eats());
+
+
 let content = document.getElementById("content")
 content.innerHTML += `
     <img src="${cat1.image}" onclick="moreInfo(cat1)" alt="">
