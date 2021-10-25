@@ -7,10 +7,13 @@ class Animal {
   }
 
   eats() {
-    console.log(this.name + " eats food");
+    // console.log(this.name + " eats food");
+    document.getElementById("animal").innerText = this.name + " eats food";
   }
   Animalsound() {
-    console.log(this.sound + " sounds is " + this.sound);
+    // console.log(this.name + " sounds is " + this.sound);
+    document.getElementById("animal").innerText =
+      this.name + " sounds is " + this.sound;
   }
 }
 
@@ -22,10 +25,13 @@ class Cat extends Animal {
     this.owner = owner;
   }
   eats() {
-    console.log("cats eats mouse");
+    // console.log("cats eats mouse");
+    document.getElementById("animal").innerText = "cats eats mouse";
   }
   Animalsound() {
-    console.log(this.name + " sounds is " + this.sound);
+    // console.log(this.name + " sounds is " + this.sound);
+    document.getElementById("animal").innerText =
+      this.name + " sounds is " + this.sound;
   }
 }
 
@@ -37,10 +43,13 @@ class Dog extends Animal {
     this.owner = owner;
   }
   eats() {
-    console.log("Dog eats chicken");
+    // console.log("Dog eats chicken");
+    document.getElementById("animal").innerText = "Dog eats chicken";
   }
   Animalsound() {
-    console.log(this.name + " sounds is " + this.sound);
+    // console.log(this.name + " sounds is " + this.sound);
+    document.getElementById("animal").innerText =
+      this.name + " sounds is " + this.sound;
   }
 }
 
@@ -52,13 +61,14 @@ class Fish extends Animal {
     this.color = color;
   }
   eats() {
-    console.log("fish eats flakes");
+    // console.log("fish eats flakes");
+    document.getElementById("animal").innerText = "fish eats flakes";
   }
 }
 
 //=======================================================
 
-let cat = new Cat("cats", 1, "cat.jpeg", "mew", "amirah");
+let cat = new Cat("cat", 1, "cat.jpeg", "mew", "amirah");
 cat.eats();
 cat.Animalsound();
 
